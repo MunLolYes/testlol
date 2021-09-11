@@ -1,6 +1,8 @@
 // document.getElementById("count-el").innerText = 5;
 
 let count = 0;
+let Saves = document.getElementById("saves-txt");
+let saveNum = 0;
 
 let addNumber = parseInt(window.prompt("How much do you want to add?"));
 let subNumber = parseInt(window.prompt("How much do u wanna substract?"));
@@ -22,4 +24,10 @@ function reset() {
     count = resetNumber;
     console.log(count);
     document.getElementById("count-el").innerText = count;
+}
+
+function save() {
+    saveNum++;
+    let newSave = "Save " + saveNum + " = " + count + ";";
+    Saves.innerText = Saves.innerText + " " + newSave;
 }
