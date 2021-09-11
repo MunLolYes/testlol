@@ -30,4 +30,6 @@ function save() {
     saveNum++;
     let newSave = "Save " + saveNum + " = " + count + ";";
     Saves.innerText = Saves.innerText + " " + newSave;
+    count = 0;
+    document.getElementById("count-el").innerText = count;
 }
